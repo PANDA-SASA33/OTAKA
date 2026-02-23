@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有限会社おおたか住設 | 広島県尾道市の水道修理・リフォーム・土木工事</title>
+    <meta name="description" content="広島県尾道市向東町の有限会社おおたか住設。LIXIL加盟店。水漏れ修理、トイレつまり、キッチンリフォームから公共の水道施設・土木・舗装工事まで幅広く対応します。">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #005CAF; /* 信頼の青 */
+            --accent: #d9534f;  /* 緊急の赤 */
+            --success: #28a745; /* 電話の緑 */
+            --light: #f8f9fa;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            margin: 0; padding: 0; line-height: 1.8; color: #333;
+        }
+
+        /* ヘッダー */
+        header {
+            background: #fff; padding: 15px 5%; display: flex;
+            justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
+        }
+        .logo h1 { font-size: 1.4rem; margin: 0; color: var(--primary); }
+        .header-info { text-align: right; }
+        .header-info .tel { font-weight: bold; font-size: 1.3rem; color: var(--accent); text-decoration: none; }
+
+        /* ヒーローエリア */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover; background-position: center; height: 450px;
+            display: flex; align-items: center; justify-content: center; color: #fff; text-align: center;
+        }
+        .hero-text h2 { font-size: 2.2rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+        .hero-text p { font-size: 1.2rem; background: rgba(0,92,175,0.8); display: inline-block; padding: 5px 20px; border-radius: 4px; }
+
+        /* セクション共通 */
+        section { padding: 70px 5%; max-width: 1100px; margin: auto; }
+        h3 { text-align: center; font-size: 1.8rem; color: var(--primary); margin-bottom: 50px; position: relative; }
+        h3::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin: 15px auto; }
+
+        /* 強みカード */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: var(--light); padding: 30px; border-radius: 10px; text-align: center; border-bottom: 5px solid var(--primary); }
+        .card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+
+        /* サービス内容 */
+        .service-container { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 30px; }
+        .service-list { list-style: none; padding: 0; }
+        .service-list li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; }
+        .service-list li i { color: var(--success); margin-right: 15px; }
+
+        /* 会社概要 & マップ */
+        .about-container { display: flex; flex-wrap: wrap; gap: 30px; }
+        .about-info { flex: 1; min-width: 320px; }
+        .map-box { flex: 1; min-width: 320px; height: 450px; border-radius: 10px; overflow: hidden; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+        th { background: #f4f4f4; width: 35%; color: #555; }
+
+        /* フッター */
+        footer { background: #333; color: #fff; text-align: center; padding: 50px 0 110px; }
+
+        /* スマホ用固定電話ボタン */
+        .fixed-tel {
+            display: none; position: fixed; bottom: 0; left: 0; width: 100%;
+            background: var(--success); color: #fff; text-align: center;
+            padding: 18px 0; font-weight: bold; font-size: 1.3rem; text-decoration: none; z-index: 2000;
+        }
+
+        @media (max-width: 768px) {
+            .header-info { display: none; }
+            .fixed-tel { display: block; }
+            .hero-text h2 { font-size: 1.6rem; }
+            section { padding: 40px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>有限会社 おおたか住設</h1></div>
+    <div class="header-info">
+        <p style="margin:0; font-size:0.8rem; color:#666;">広島県尾道市の水道修理・建設工事</p>
+        <a href="tel:0848441113" class="tel">☎ 0848-44-1113</a>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="hero-text">
+        <h2>尾道の街と、暮らしの水を守り続けて。</h2>
+        <p>LIXILリフォームネットワーク加盟店</p>
+    </div>
+</div>
+
+<section id="strengths">
+    <h3>おおたか住設の強み</h3>
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-tools"></i>
+            <h4>11業種の建設業許可</h4>
+            <p>水道施設、管工事に加え、土木・建築・舗装・解体など幅広い許可を取得。住まいの問題を総合的に解決します。</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h4>尾道・向東に根ざして</h4>
+            <p>地元の水道屋だからこそ、急な水漏れやトラブルにも迅速に対応。安心と信頼を直接お届けします。</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-award"></i>
+            <h4>安心のLIXIL加盟店</h4>
+            <p>一流メーカーLIXILの加盟店として、最新の設備提案と高品質なリフォーム工事を提供いたします。</p>
+        </div>
+    </div>
+</section>
+
+<section id="services" style="background: var(--light);">
+    <h3>サービス案内</h3>
+    <div class="grid">
+        <div class="service-container">
+            <h4>一般のお客様</h4>
+            <ul class="service-list">
+                <li><i class="fas fa-check"></i>蛇口・トイレの水漏れ修理</li>
+                <li><i class="fas fa-check"></i>キッチン・バス・洗面のリフォーム</li>
+                <li><i class="fas fa-check"></i>下水道切替・浄化槽設置工事</li>
+                <li><i class="fas fa-check"></i>エコキュート・給湯器の交換</li>
+            </ul>
+        </div>
+        <div class="service-container">
+            <h4>公共・法人のお客様</h4>
+            <ul class="service-list">
+                <li><i class="fas fa-check"></i>公共水道施設工事・管工事</li>
+                <li><i class="fas fa-check"></i>道路舗装工事・土木一式工事</li>
+                <li><i class="fas fa-check"></i>建物解体工事・外構工事</li>
+                <li><i class="fas fa-check"></i>給排水設備の保守点検</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h3>会社概要・アクセス</h3>
+    <div class="about-container">
+        <div class="about-info">
+            <table>
+                <tr><th>会社名</th><td>有限会社 おおたか住設</td></tr>
+                <tr><th>代表者</th><td>大高 賢也</td></tr>
+                <tr><th>所在地</th><td>〒722-0062<br>広島県尾道市向東町8856-1</td></tr>
+                <tr><th>電話番号</th><td>0848-44-1113</td></tr>
+                <tr><th>営業時間</th><td>8:00 〜 17:00</td></tr>
+                <tr><th>定休日</th><td>日曜日・祝日・第2/第4土曜日</td></tr>
+                <tr><th>許可業種</th><td>広島県知事許可（一般）第29305号</td></tr>
+            </table>
+        </div>
+        <div class="map-box">
+            <iframe 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                style="border:0" 
+                src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=広島県尾道市向東町8856-1+(有限会社おおたか住設)&language=ja" 
+                allowfullscreen>
+            </iframe>
+            <script>
+                document.querySelector('iframe').src = "https://maps.google.com/maps?q=広島県尾道市向東町8856-1+(有限会社おおたか住設)&z=15&output=embed&hl=ja";
+            </script>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p><strong>有限会社 おおたか住設</strong><br>広島県尾道市向東町8856-1</p>
+    <p style="font-size: 0.8rem; margin-top: 20px; color: #ccc;">© 2026 有限会社おおたか住設 All Rights Reserved.</p>
+</footer>
+
+<a href="tel:0848441113" class="fixed-tel">
+    <i class="fas fa-phone-alt"></i> 今すぐ電話で相談する
+</a>
+
+</body>
+</html>
