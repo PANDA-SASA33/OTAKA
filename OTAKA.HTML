@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,6 +13,7 @@
             --accent: #d9534f;  /* 緊急の赤 */
             --success: #28a745; /* 電話の緑 */
             --light: #f8f9fa;
+            --reliablity:#f39c12; /*情熱のオレンジ*/
         }
 
         body {
@@ -28,10 +30,37 @@
         .logo h1 { font-size: 1.4rem; margin: 0; color: var(--primary); }
         .header-info { text-align: right; }
         .header-info .tel { font-weight: bold; font-size: 1.3rem; color: var(--accent); text-decoration: none; }
-
+        .hidden-seo { display: none; }
+        
+        section { padding: 70px 5%; max-width: 1100px; margin: auto; }
+        h3 { text-align: center; font-size: 1.8rem; color: var(--primary); margin-bottom: 50px; position: relative; }
+        h3::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin: 15px auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: var(--light); padding: 30px; border-radius: 10px; text-align: center; border-bottom: 5px solid var(--primary); }
+        .card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+        .service-container { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 30px; }
+        .service-list { list-style: none; padding: 0; }
+        .service-list li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; }
+        .service-list li i { color: var(--success); margin-right: 15px; }
+        .about-wrap { display: flex; flex-wrap: wrap; gap: 30px; }
+        .about-info { flex: 1; min-width: 320px; }
+        .map-box { flex: 1.2; min-width: 320px; height: 450px; border-radius: 10px; overflow: hidden; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+        th { background: #f4f4f4; width: 35%; color: #555; }
+        footer { background: #333; color: #fff; text-align: center; padding: 50px 0 110px; }
+        .fixed-tel {
+            display: none; position: fixed; bottom: 0; left: 0; width: 100%;
+            background: var(--success); color: #fff; text-align: center;
+            padding: 18px 0; font-weight: bold; font-size: 1.3rem; text-decoration: none; z-index: 2000;
+        }
+        @media (max-width: 768px) {
+            .fixed-tel { display: block; }
+            section { padding: 40px 5%; }
+        }
         /* ヒーローエリア */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('5d289422.png');
             background-size: cover; background-position: center; height: 450px;
             display: flex; align-items: center; justify-content: center; color: #fff; text-align: center;
         }
@@ -155,6 +184,11 @@
                 <tr><th>定休日</th><td>日曜日・祝日・第2/第4土曜日</td></tr>
                 <tr><th>許可業種</th><td>広島県知事許可（一般）第29305号</td></tr>
             </table>
+
+        </table>
+    
+    </div>
+</section>
         </div>
         <div class="map-box">
             <iframe 
@@ -171,7 +205,44 @@
         </div>
     </div>
 </section>
+<section id="recruit" style="background: #fff; padding: 60px 5%;">
+    <div class="section-title">
+        <h3>採用情報（一緒に働く仲間を募集）</h3>
+    </div>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; max-width: 1100px; margin: 0 auto;">
+        
+        <div style="flex: 1; min-width: 320px; background: var(--light); border-radius: 20px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--primary);">
+            <h4 style="color: var(--primary); margin-top: 0;"><i class="fas fa-tools"></i> 現場作業員</h4>
+            <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse; background: transparent;">
+                <tr style="border-bottom: 1px solid #ddd;"><th style="padding: 10px; text-align: left; width: 30%;">給与</th><td style="padding: 10px;">月給 20.0万円 ～ 35.0万円</td></tr>
+                <tr style="border-bottom: 1px solid #ddd;"><th style="padding: 10px; text-align: left;">内容</th><td style="padding: 10px;">水道配管・土木・リフォーム現場作業</td></tr>
+            </table>
+            <div style="text-align: center; margin-top: 20px;">
+               <a href="https://en-gage.net/ohtaka_jyusetu_saiyo/" target="_blank" rel="noopener" 
+   style="display: block; background: #f39c12; color: #fff; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 10px rgba(40,167,69,0.2);">
+    詳細・応募はこちら
+            　</a> 
+            </div>
+        </div>
 
+        <div style="flex: 1; min-width: 320px; background: var(--light); border-radius: 20px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--primary);">
+            <h4 style="color: var(--primary); margin-top: 0;"><i class="fas fa-user-shield"></i> 警備スタッフ</h4>
+            <table style="width: 100%; font-size: 0.9rem; border-collapse: collapse; background: transparent;">
+                <tr style="border-bottom: 1px solid #ddd;"><th style="padding: 10px; text-align: left; width: 30%;">給与</th><td style="padding: 10px;">日給 8,000円 ～ 10,000円</td></tr>
+                <tr style="border-bottom: 1px solid #ddd;"><th style="padding: 10px; text-align: left;">内容</th><td style="padding: 10px;">工事現場等での交通誘導・安全確保</td></tr>
+            </table>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://en-gage.net/ohtaka_jyusetu_saiyo/" target="_blank" rel="noopener" 
+   style="display: block; background: #f39c12; color: #fff; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 10px rgba(243,156,18,0.2);">
+    詳細・応募はこちら
+</a>
+            </div>
+        </div>
+
+    </div>
+    <p style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 20px;">※採用の詳細は外部サイト「エンゲージ」にて管理・受付しております。</p>
+</section>
 <footer>
     <p><strong>有限会社 おおたか住設</strong><br>広島県尾道市向東町8856-1</p>
     <p style="font-size: 0.8rem; margin-top: 20px; color: #ccc;">© 2026 有限会社おおたか住設 All Rights Reserved.</p>
