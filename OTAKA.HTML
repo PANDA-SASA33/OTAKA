@@ -1,142 +1,272 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>施工ディレクター 採用詳細 | 有限会社おおたか住設</title>
+    <title>有限会社おおたか住設 | 広島県尾道市の水道修理・リフォーム・土木工事</title>
+    <meta name="description" content="広島県尾道市向東町の有限会社おおたか住設。LIXIL加盟店。水漏れ修理、トイレつまり、キッチンリフォームから公共の水道施設・土木・舗装工事まで幅広く対応します。">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #005CAF; --accent: #28a745; --light: #f8f9fa; --text: #333; }
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.7; color: var(--text); margin: 0; background: #f4f7f9; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { background: #fff; padding: 15px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 30px; }
-        .back-btn { display: inline-block; text-decoration: none; color: var(--primary); font-weight: bold; margin-bottom: 20px; }
-        
-        .job-card { background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        .tag-main { background: var(--primary); color: #fff; padding: 4px 12px; border-radius: 5px; font-size: 0.8rem; vertical-align: middle; }
-        h1 { color: var(--primary); font-size: 1.6rem; margin: 15px 0; border-bottom: 3px solid var(--primary); padding-bottom: 10px; }
-        
-        .intro-text { background: #eef6ff; padding: 20px; border-radius: 10px; margin-bottom: 30px; border-left: 5px solid var(--primary); }
-        .intro-text p { margin: 0 0 10px 0; font-weight: bold; color: var(--primary); }
+        :root {
+            --primary: #005CAF; /* 信頼の青 */
+            --accent: #d9534f;  /* 緊急の赤 */
+            --success: #28a745; /* 電話の緑 */
+            --light: #f8f9fa;
+            --reliablity:#f39c12; /*情熱のオレンジ*/
+        }
 
-        h2 { font-size: 1.2rem; border-left: 5px solid var(--primary); padding-left: 15px; margin: 40px 0 20px; color: var(--primary); }
-        
-        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
-        th { background: #f8f9fa; width: 30%; padding: 15px; text-align: left; border-bottom: 1px solid #eee; vertical-align: top; font-size: 0.95rem; }
-        td { padding: 15px; border-bottom: 1px solid #eee; font-size: 0.95rem; }
-        
-        .point-box { background: #fff9e6; border: 1px dashed #f39c12; padding: 15px; border-radius: 8px; margin-top: 10px; font-size: 0.9rem; }
-        .apply-box { text-align: center; background: #fff; padding: 40px 20px; border-radius: 15px; margin-top: 40px; box-shadow: 0 -5px 20px rgba(0,0,0,0.05); }
-        .btn-apply { display: inline-block; background: var(--accent); color: #fff !important; padding: 20px 60px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(40,167,69,0.3); transition: 0.3s; }
-        .btn-apply:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(40,167,69,0.4); }
-        
-        ul { padding-left: 20px; margin: 0; }
-        li { margin-bottom: 5px; }
-        .salary-example { background: #fff9e6; padding: 15px; border-radius: 8px; border: 1px dashed #f39c12; margin-top: 10px; }
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            margin: 0; padding: 0; line-height: 1.8; color: #333;
+        }
 
-        @media (max-width: 600px) {
-            th { width: 100%; display: block; background: #f0f0f0; padding: 8px 15px; }
-            td { width: 100%; display: block; padding: 10px 15px 25px; }
-            .btn-apply { width: 100%; box-sizing: border-box; }
+        /* ヘッダー */
+        header {
+            background: #fff; padding: 15px 5%; display: flex;
+            justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
+        }
+        .logo h1 { font-size: 1.4rem; margin: 0; color: var(--primary); }
+        .header-info { text-align: right; }
+        .header-info .tel { font-weight: bold; font-size: 1.3rem; color: var(--accent); text-decoration: none; }
+        .hidden-seo { display: none; }
+        
+        section { padding: 70px 5%; max-width: 1100px; margin: auto; }
+        h3 { text-align: center; font-size: 1.8rem; color: var(--primary); margin-bottom: 50px; position: relative; }
+        h3::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin: 15px auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: var(--light); padding: 30px; border-radius: 10px; text-align: center; border-bottom: 5px solid var(--primary); }
+        .card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+        .service-container { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 30px; }
+        .service-list { list-style: none; padding: 0; }
+        .service-list li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; }
+        .service-list li i { color: var(--success); margin-right: 15px; }
+        .about-wrap { display: flex; flex-wrap: wrap; gap: 30px; }
+        .about-info { flex: 1; min-width: 320px; }
+        .map-box { flex: 1.2; min-width: 320px; height: 450px; border-radius: 10px; overflow: hidden; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+        th { background: #f4f4f4; width: 35%; color: #555; }
+        footer { background: #333; color: #fff; text-align: center; padding: 50px 0 110px; }
+        .fixed-tel {
+            display: none; position: fixed; bottom: 0; left: 0; width: 100%;
+            background: var(--success); color: #fff; text-align: center;
+            padding: 18px 0; font-weight: bold; font-size: 1.3rem; text-decoration: none; z-index: 2000;
+        }
+        @media (max-width: 768px) {
+            .fixed-tel { display: block; }
+            section { padding: 40px 5%; }
+        }
+        /* ヒーローエリア */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('5d289422.png');
+            background-size: cover; background-position: center; height: 450px;
+            display: flex; align-items: center; justify-content: center; color: #fff; text-align: center;
+        }
+        .hero-text h2 { font-size: 2.2rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+        .hero-text p { font-size: 1.2rem; background: rgba(0,92,175,0.8); display: inline-block; padding: 5px 20px; border-radius: 4px; }
+
+        /* セクション共通 */
+        section { padding: 70px 5%; max-width: 1100px; margin: auto; }
+        h3 { text-align: center; font-size: 1.8rem; color: var(--primary); margin-bottom: 50px; position: relative; }
+        h3::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin: 15px auto; }
+
+        /* 強みカード */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: var(--light); padding: 30px; border-radius: 10px; text-align: center; border-bottom: 5px solid var(--primary); }
+        .card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+
+        /* サービス内容 */
+        .service-container { background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 30px; }
+        .service-list { list-style: none; padding: 0; }
+        .service-list li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; }
+        .service-list li i { color: var(--success); margin-right: 15px; }
+
+        /* 会社概要 & マップ */
+        .about-container { display: flex; flex-wrap: wrap; gap: 30px; }
+        .about-info { flex: 1; min-width: 320px; }
+        .map-box { flex: 1; min-width: 320px; height: 450px; border-radius: 10px; overflow: hidden; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+        th { background: #f4f4f4; width: 35%; color: #555; }
+
+        /* フッター */
+        footer { background: #333; color: #fff; text-align: center; padding: 50px 0 110px; }
+
+        /* スマホ用固定電話ボタン */
+        .fixed-tel {
+            display: none; position: fixed; bottom: 0; left: 0; width: 100%;
+            background: var(--success); color: #fff; text-align: center;
+            padding: 18px 0; font-weight: bold; font-size: 1.3rem; text-decoration: none; z-index: 2000;
+        }
+
+        @media (max-width: 768px) {
+            .header-info { display: none; }
+            .fixed-tel { display: block; }
+            .hero-text h2 { font-size: 1.6rem; }
+            section { padding: 40px 5%; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div style="font-weight:bold; color:var(--primary); font-size: 1.2rem;">有限会社 おおたか住設</div>
+    <div class="logo"><h1>有限会社 おおたか住設</h1></div>
+    <div class="header-info">
+        <p style="margin:0; font-size:0.8rem; color:#666;">広島県尾道市の水道修理・建設工事</p>
+        <a href="tel:0848441113" class="tel">☎ 0848-44-1113</a>
+    </div>
 </header>
 
-<div class="container">
-    <a href="OTAKA.HTML" class="back-btn"><i class="fas fa-arrow-left"></i> ホームページへ戻る</a>
-
-    <div class="job-card">
-        <span class="tag-main">正社員</span>
-        <h1>ライフライン施工ディレクター（経験者優遇）</h1>
-        
-        <div class="intro-text">
-            <p>★みんな仲良く定着率の高さも自慢です！<br>★お休みなどは相談に応じます</p>
-            尾道市や福山市の指定工事店として、水道・配管のインフラ整備や災害復旧、リフォームなど、地域を支える重要な業務を担っています。これまでの経験を活かし、当社の次代を担う中核メンバーとして活躍を期待しています！
-        </div>
-
-        <h2>募集要項</h2>
-        <table>
-            <tr>
-                <th>仕事内容</th>
-                <td>
-                    <strong>給排水設備の施工管理業務全般</strong><br>
-                    ・工事管理（原価・工程・品質・安全管理）<br>
-                    ・施工チームの管理（安全・衛生・健康管理）<br><br>
-                    <strong>【詳細】</strong><br>
-                    ・顧客との打合せ、工事計画立案<br>
-                    ・資材手配、見積・書類作成、図面作成(CAD)<br>
-                    ・施工から引き渡しまでの現場管理
-                </td>
-            </tr>
-            <tr>
-                <th>給与</th>
-                <td>
-                    <strong>月給 220,000円 ～ 400,000円</strong><br>
-                    （想定年収：310万円 ～ 560万円）<br>
-                    <small>※経験・有資格者は前職給与を最大限考慮します。</small>
-                    <div class="salary-example">
-                        <strong>年収例：</strong> 500万円（35歳・入社7年目）
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th>応募資格</th>
-                <td>
-                    ・高校卒以上 / 経験者募集<br>
-                    ・普通自動車免許（AT限定可）<br>
-                    ・給排水設備等の実務経験（年数不問）<br>
-                    <span style="color:var(--accent); font-weight:bold;">★管工事施工管理技士の有資格者は優遇！</span>
-                </td>
-            </tr>
-            <tr>
-                <th>勤務時間</th>
-                <td>
-                    08:00 ～ 17:00（実働7時間30分 / 休憩90分）
-                </td>
-            </tr>
-            <tr>
-                <th>休日・休暇</th>
-                <td>
-                    週休2日制（土日 ※会社カレンダーにより土曜出勤あり）<br>
-                    GW、夏季休暇、年末年始休暇、有給休暇、慶弔休暇
-                </td>
-            </tr>
-            <tr>
-                <th>勤務地</th>
-                <td>
-                    strong>本社（転勤なし）および尾道市内の各現場</strong><br>
-                    広島県尾道市向東町8856-1<br>
-                    <div class="point-box">
-                        <i class="fas fa-car"></i> <strong>車通勤OK！無料の広い駐車場完備</strong><br>
-                        本社裏に大きな駐車場があります。もちろん駐車場代は無料です。
-                    </div>
-            </tr>
-            <tr>
-                <th>福利厚生</th>
-                <td>
-                    ・昇給年1回 / 賞与年2回<br>
-                    ・社会保険完備（雇用・労災・健康・厚生年金）<br>
-                    ・交通費支給 / 制服支給 / 服装自由<br>
-                    ・資格取得支援制度（手当あり）<br>
-                    ・試用期間3ヶ月（条件変更なし）
-                </td>
-            </tr>
-        </table>
-
-        <div class="apply-box">
-            <p style="margin-bottom: 20px; font-weight: bold;">地域のインフラを守る仕事に、あなたの力を貸してください。</p>
-            <a href="https://en-gage.net/user/signup/?work_id=16152523&aroute=1601&foreign_flg=0&company_id=620714&route=10" class="btn-apply" target="_blank">
-                <i class="fas fa-paper-plane"></i> この職種に応募する
-            </a>
-            <p style="font-size: 0.8rem; color: #666; margin-top: 15px;">※外部サイト「エンゲージ」へ移動します</p>
-        </div>
+<div class="hero">
+    <div class="hero-text">
+        <h2>尾道の街と、暮らしの水を守り続けて。</h2>
+        <p>LIXILリフォームネットワーク加盟店</p>
     </div>
 </div>
+
+<section id="strengths">
+    <h3>おおたか住設の強み</h3>
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-tools"></i>
+            <h4>11業種の建設業許可</h4>
+            <p>水道施設、管工事に加え、土木・建築・舗装・解体など幅広い許可を取得。住まいの問題を総合的に解決します。</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h4>尾道・向東に根ざして</h4>
+            <p>地元の水道屋だからこそ、急な水漏れやトラブルにも迅速に対応。安心と信頼を直接お届けします。</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-award"></i>
+            <h4>安心のLIXIL加盟店</h4>
+            <p>一流メーカーLIXILの加盟店として、最新の設備提案と高品質なリフォーム工事を提供いたします。</p>
+        </div>
+    </div>
+</section>
+
+<section id="services" style="background: var(--light);">
+    <h3>サービス案内</h3>
+    <div class="grid">
+        <div class="service-container">
+            <h4>一般のお客様</h4>
+            <ul class="service-list">
+                <li><i class="fas fa-check"></i>蛇口・トイレの水漏れ修理</li>
+                <li><i class="fas fa-check"></i>キッチン・バス・洗面のリフォーム</li>
+                <li><i class="fas fa-check"></i>下水道切替・浄化槽設置工事</li>
+                <li><i class="fas fa-check"></i>エコキュート・給湯器の交換</li>
+            </ul>
+        </div>
+        <div class="service-container">
+            <h4>公共・法人のお客様</h4>
+            <ul class="service-list">
+                <li><i class="fas fa-check"></i>公共水道施設工事・管工事</li>
+                <li><i class="fas fa-check"></i>道路舗装工事・土木一式工事</li>
+                <li><i class="fas fa-check"></i>建物解体工事・外構工事</li>
+                <li><i class="fas fa-check"></i>給排水設備の保守点検</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h3>会社概要・アクセス</h3>
+    <div class="about-container">
+        <div class="about-info">
+            <table>
+                <tr><th>会社名</th><td>有限会社 おおたか住設</td></tr>
+                <tr><th>代表者</th><td>大高 賢也</td></tr>
+                <tr><th>所在地</th><td>〒722-0062<br>広島県尾道市向東町8856-1</td></tr>
+                <tr><th>電話番号</th><td>0848-44-1113</td></tr>
+                <tr><th>営業時間</th><td>8:00 〜 17:00</td></tr>
+                <tr><th>定休日</th><td>日曜日・祝日・第2/第4土曜日</td></tr>
+                <tr><th>許可業種</th><td>広島県知事許可（一般）第29305号</td></tr>
+            </table>
+
+        </table>
+    
+    </div>
+</section>
+        </div>
+        <div class="map-box">
+            <iframe 
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                style="border:0" 
+                src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=広島県尾道市向東町8856-1+(有限会社おおたか住設)&language=ja" 
+                allowfullscreen>
+            </iframe>
+            <script>
+                document.querySelector('iframe').src = "https://maps.google.com/maps?q=広島県尾道市向東町8856-1+(有限会社おおたか住設)&z=15&output=embed&hl=ja";
+            </script>
+        </div>
+    </div>
+</section>
+<section id="recruit" style="background: #f9f9f9; padding: 60px 5%;">
+    <div class="section-title">
+        <h3>採用情報（一緒に働く仲間を募集）</h3>
+        <p style="text-align: center; color: #666; margin-top: -40px; margin-bottom: 40px;">★みんな仲良く定着率の高さが自慢です！</p>
+    </div>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; max-width: 1200px; margin: 0 auto;">
+        
+        <div style="flex: 1; min-width: 300px; background: #ffffff; border-radius: 15px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #005CAF; -webkit-transform: translateZ(0);">
+            <span style="background: #005CAF; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 3px;">正社員 / 経験者</span>
+            <h4 style="color: #005CAF; margin: 10px 0; font-size: 1.2rem;">施工ディレクター</h4>
+            <p style="font-size: 0.85rem; color: #555; height: 3em;">尾道を支える給排水設備の施工管理業務全般をお任せします。</p>
+            <table style="width: 100%; font-size: 0.85rem; border-collapse: collapse; margin-top: 10px;">
+                <tr style="border-bottom: 1px solid #eee;"><th style="padding: 8px 0; text-align: left; width: 30%; color: #333;">給与</th><td style="padding: 8px 0; color: #444; font-weight: bold;">月給 22万 ～ 40万円</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><th style="padding: 8px 0; text-align: left;">資格</th><td style="padding: 8px 0; color: #444;">普通免許(AT可) / 経験者</td></tr>
+            </table>
+            <a href="https://en-gage.net/ohtaka_jyusetu_saiyo/" target="_blank" rel="noopener" 
+               style="display: block; background: #005CAF; color: #ffffff !important; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+                詳細・応募はこちら
+            </a>
+        </div>
+
+        <div style="flex: 1; min-width: 300px; background: #ffffff; border-radius: 15px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #28a745; -webkit-transform: translateZ(0);">
+            <span style="background: #28a745; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 3px;">パ・ア・正 / 未経験可</span>
+            <h4 style="color: #28a745; margin: 10px 0; font-size: 1.2rem;">ルームクリーニング</h4>
+            <p style="font-size: 0.85rem; color: #555; height: 3em;">賃貸物件の退去後の清掃業務。空き時間の有効活用OK！</p>
+            <table style="width: 100%; font-size: 0.85rem; border-collapse: collapse; margin-top: 10px;">
+                <tr style="border-bottom: 1px solid #eee;"><th style="padding: 8px 0; text-align: left; width: 30%; color: #333;">給与</th><td style="padding: 8px 0; color: #444; font-weight: bold;">時給 1,085円 ～</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><th style="padding: 10px; text-align: left; width: 30%;">警備スタッフ</th><td style="padding: 10px;">日給 8,400円 ～ 12,000円</td></tr>
+            </table>
+            <a href="https://en-gage.net/ohtaka_jyusetu_saiyo/" target="_blank" rel="noopener" 
+               style="display: block; background: #28a745; color: #ffffff !important; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+                詳細・応募はこちら
+            </a>
+        </div>
+
+        <div style="flex: 1; min-width: 300px; background: #ffffff; border-radius: 15px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #f39c12; -webkit-transform: translateZ(0);">
+            <span style="background: #f39c12; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 3px;">アルバイト / 週2〜OK</span>
+            <h4 style="color: #f39c12; margin: 10px 0; font-size: 1.2rem;">交通誘導スタッフ</h4>
+            <p style="font-size: 0.85rem; color: #555; height: 3em;">工事現場での通行人・車両の安全確保。力作業なし！</p>
+            <table style="width: 100%; font-size: 0.85rem; border-collapse: collapse; margin-top: 10px;">
+                <tr style="border-bottom: 1px solid #eee;"><th style="padding: 8px 0; text-align: left; width: 30%; color: #333;">給与</th><td style="padding: 8px 0; color: #444; font-weight: bold;">日給 8,400円 ～</td></tr>
+                <tr style="border-bottom: 1px solid #eee;"><th style="padding: 8px 0; text-align: left;">シフト</th><td style="padding: 8px 0; color: #444;">週2日〜 応相談</td></tr>
+            </table>
+            <a href="https://en-gage.net/ohtaka_jyusetu_saiyo/" target="_blank" rel="noopener" 
+               style="display: block; background: #f39c12; color: #ffffff !important; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+                詳細・応募はこちら
+            </a>
+        </div>
+
+    </div>
+    <p style="text-align: center; font-size: 0.8rem; color: #777; margin-top: 30px;">※上記以外の雇用形態、福利厚生の詳細は採用サイトをご確認ください。</p>
+</section>
+</section>
+<footer>
+    <p><strong>有限会社 おおたか住設</strong><br>広島県尾道市向東町8856-1</p>
+    <p style="font-size: 0.8rem; margin-top: 20px; color: #ccc;">© 2026 有限会社おおたか住設 All Rights Reserved.</p>
+</footer>
+
+<a href="tel:0848441113" class="fixed-tel">
+    <i class="fas fa-phone-alt"></i> 今すぐ電話で相談する
+</a>
 
 </body>
 </html>
