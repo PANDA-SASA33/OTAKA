@@ -6,17 +6,21 @@
     <title>施工マネージャー採用詳細 | 有限会社おおたか住設</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #005CAF; --sub: #28a745; --light: #f8f9fa; --text: #333; }
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.8; color: var(--text); margin: 0; background: #f4f7f9; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { background: #fff; padding: 15px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 30px; }
-        .back-btn { display: inline-block; text-decoration: none; color: var(--primary); font-weight: bold; margin-bottom: 20px; }
+        /* テーマカラーをえんじ色（#A52A2A）に設定 */
+        :root { --primary: #A52A2A; --sub: #A52A2A; --light: #fdf2f2; --text: #333; }
         
-        .job-card { background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.8; color: var(--text); margin: 0; background: #fdfafb; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        
+        header { background: #fff; padding: 15px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .back-btn { display: inline-block; text-decoration: none; color: var(--primary); font-weight: bold; margin-bottom: 20px; transition: 0.3s; }
+        .back-btn:hover { opacity: 0.7; }
+        
+        .job-card { background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(165,42,42,0.08); border: 1px solid #f2e6e6; }
         .tag-main { background: var(--primary); color: #fff; padding: 4px 12px; border-radius: 5px; font-size: 0.8rem; vertical-align: middle; }
         h1 { color: var(--primary); font-size: 1.6rem; margin: 15px 0; border-bottom: 3px solid var(--primary); padding-bottom: 10px; }
         
-        .intro-text { background: #eef6ff; padding: 20px; border-radius: 10px; margin-bottom: 30px; border-left: 5px solid var(--primary); }
+        .intro-text { background: var(--light); padding: 20px; border-radius: 10px; margin-bottom: 30px; border-left: 5px solid var(--primary); }
         .intro-text p { margin: 0 0 10px 0; font-weight: bold; color: var(--primary); }
 
         .merit-banner { background: #fff9e6; border: 1px dashed #f39c12; padding: 15px; border-radius: 8px; margin-bottom: 25px; font-size: 0.95rem; }
@@ -24,16 +28,17 @@
         h2 { font-size: 1.2rem; border-left: 5px solid var(--primary); padding-left: 15px; margin: 40px 0 20px; color: var(--primary); }
         
         table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
-        th { background: #f8f9fa; width: 30%; padding: 15px; text-align: left; border-bottom: 1px solid #eee; vertical-align: top; font-size: 0.95rem; }
+        th { background: #faf5f5; width: 30%; padding: 15px; text-align: left; border-bottom: 1px solid #eee; vertical-align: top; font-size: 0.95rem; color: #555; }
         td { padding: 15px; border-bottom: 1px solid #eee; font-size: 0.95rem; }
         
-        .point-box { background: #f0f7ff; padding: 15px; border-radius: 8px; margin-top: 10px; font-size: 0.9rem; color: #005CAF; border: 1px solid #d0e3f7; }
+        .point-box { background: #fff9e6; border: 1px dashed #f39c12; padding: 15px; border-radius: 8px; margin-top: 10px; font-size: 0.9rem; }
         
         .apply-box { text-align: center; background: #fff; padding: 40px 20px; border-radius: 15px; margin-top: 40px; box-shadow: 0 -5px 20px rgba(0,0,0,0.05); }
-        .btn-apply { display: inline-block; background: var(--sub); color: #fff !important; padding: 20px 60px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(40,167,69,0.3); transition: 0.3s; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+        .btn-apply { display: inline-block; background: var(--primary); color: #fff !important; padding: 20px 60px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(165,42,42,0.3); transition: 0.3s; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+        .btn-apply:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(165,42,42,0.4); }
 
         @media (max-width: 600px) {
-            th { width: 100%; display: block; background: #f0f0f0; padding: 8px 15px; }
+            th { width: 100%; display: block; background: #f9f0f0; padding: 8px 15px; }
             td { width: 100%; display: block; padding: 10px 15px 25px; }
         }
     </style>
@@ -78,10 +83,17 @@
                 <td>
                     <strong>月給 220,000円 ～ 400,000円</strong><br>
                     （想定年収：3,100,000円 ～ 5,600,000円）<br>
-                    <small>※経験者や有資格者は、前職の給与を最大限考慮いたします。</small>
                     <div class="point-box">
-                        <strong>年収例：</strong> 500万円（35歳・入社7年目）
+                        <i class="fas fa-check-circle"></i> <strong>前職の給与を考慮：</strong><br>
+                        経験や有資格者は前職の給与や実績を最大限考慮いたします。
                     </div>
+                </td>
+            </tr>
+            <tr>
+                <th>試用期間</th>
+                <td>
+                    <strong>試用期間あり（3ヶ月）</strong><br>
+                    ※雇用形態、給与は本採用時と同じです。
                 </td>
             </tr>
             <tr>
@@ -104,10 +116,11 @@
                     <strong>本社（転勤なし）</strong><br>
                     広島県尾道市向東町8856-1<br>
                     <div class="point-box">
-                        <i class="fas fa-car"></i> <strong>車通勤OK！無料駐車場完備</strong><br>
-                        本社裏の大きな駐車場を無料でご利用いただけます。
+                        <i class="fas fa-car"></i> <strong>車通勤OK！無料の広い駐車場完備</strong><br>
+                        本社裏に大きな駐車場があります。もちろん駐車場代は無料です。
                     </div>
                 </td>
+ 
             </tr>
             <tr>
                 <th>応募資格</th>
@@ -115,7 +128,7 @@
                     ・高校卒以上 / 経験者募集<br>
                     ・普通自動車免許（AT限定可）<br>
                     ・土木など建設業界での実務経験（年数不問）<br>
-                    <small>★土木施工管理技士の有資格者は特に優遇します。</small>
+                    <small style="color:var(--primary); font-weight:bold;">★土木施工管理技士の有資格者は特に優遇します。</small>
                 </td>
             </tr>
             <tr>
