@@ -6,13 +6,16 @@
     <title>施工マネージャー採用詳細 | 有限会社おおたか住設</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* テーマカラーをえんじ色（#A52A2A）に設定 */
-        :root { --primary: #A52A2A; --sub: #A52A2A; --light: #fdf2f2; --text: #333; }
+        /* 基本テーマはえんじ色（#A52A2A） */
+        :root { --primary: #A52A2A; --sub: #A52A2A; --light: #fdf2f2; --text: #333; --header-blue: #005CAF; }
         
         body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.8; color: var(--text); margin: 0; background: #fdfafb; }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
         
         header { background: #fff; padding: 15px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        /* ヘッダーの文字色を青に指定 */
+        .header-logo { font-weight: bold; color: var(--header-blue); font-size: 1.2rem; }
+        
         .back-btn { display: inline-block; text-decoration: none; color: var(--primary); font-weight: bold; margin-bottom: 20px; transition: 0.3s; }
         .back-btn:hover { opacity: 0.7; }
         
@@ -31,7 +34,7 @@
         th { background: #faf5f5; width: 30%; padding: 15px; text-align: left; border-bottom: 1px solid #eee; vertical-align: top; font-size: 0.95rem; color: #555; }
         td { padding: 15px; border-bottom: 1px solid #eee; font-size: 0.95rem; }
         
-        .point-box { background: #fff9e6; border: 1px dashed #f39c12; padding: 15px; border-radius: 8px; margin-top: 10px; font-size: 0.9rem; }
+        .point-box { background: #fdf2f2; padding: 15px; border-radius: 8px; margin-top: 10px; font-size: 0.9rem; color: #A52A2A; border: 1px solid #f2d9d9; }
         
         .apply-box { text-align: center; background: #fff; padding: 40px 20px; border-radius: 15px; margin-top: 40px; box-shadow: 0 -5px 20px rgba(0,0,0,0.05); }
         .btn-apply { display: inline-block; background: var(--primary); color: #fff !important; padding: 20px 60px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(165,42,42,0.3); transition: 0.3s; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
@@ -46,7 +49,7 @@
 <body>
 
 <header>
-    <div style="font-weight:bold; color:var(--primary); font-size: 1.2rem;">有限会社 おおたか住設</div>
+    <div class="header-logo">有限会社 おおたか住設</div>
 </header>
 
 <div class="container">
@@ -120,7 +123,6 @@
                         本社裏に大きな駐車場があります。もちろん駐車場代は無料です。
                     </div>
                 </td>
- 
             </tr>
             <tr>
                 <th>応募資格</th>
